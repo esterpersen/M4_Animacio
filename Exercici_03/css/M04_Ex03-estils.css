@@ -1,0 +1,158 @@
+* {
+  margin: 2px;
+  box-sizing: border-box;
+}
+
+/* Això conté les 5 columnes */
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 650px;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+/* Això és l'espai pel contingut de cada columna */
+.contingut {
+  margin: 0px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Abans que es generi el contingut, crea la franja blanca de les 5 columnes */
+.contingut:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: white;
+  opacity: 0.1;
+
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+
+  transform: skew(30deg) scaleX(1) translate(0,0);
+  z-index: 1;
+  transition: all 0.6s;
+}
+
+/* Què passa quan fem hover a les columnes */
+.contingut:hover:before {
+  transform: skew(30deg) scaleX(4) translate(0,0);
+  transition: all 0.4s ease;
+}
+
+/* Això és el text de les 5 columnes */
+h1 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 40px;
+}
+
+/* Propietats de cada columna */
+.stripe1 {
+  display: flex;
+  flex: 1 1 20%;
+  align-self: stretch;
+  background-color: #244f75;
+  animation: stripe1 0.5s ease 0.1s 1 normal backwards;
+}
+/* Animació de cada columna a sota de les propietats de cada columna. Cada una apareix de manera diferent i té un delay diferent. stripe1 apareix p l'esquerra. Delay 0.1*/
+@keyframes stripe1 {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* stripe2 apareix p sota. Delay 0.2 */
+.stripe2 {
+  display: flex;
+  flex: 1 1 20%;
+  align-self: stretch;
+  background-color: #60bfbf;
+  animation: stripe2 0.5s ease 0.2s 1 normal backwards;
+}
+
+@keyframes stripe2 {
+  0% {
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* stripe3 apareix p dalt. Delay 0.3 */
+.stripe3 {
+  display: flex;
+  flex: 1 1 20%;
+  align-self: stretch;
+  background-color: #8c4b7e;
+  animation: stripe3 0.5s ease 0.3s 1 normal backwards;
+}
+
+@keyframes stripe3 {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* stripe4 apareix p sota. Delay 0.4 */
+.stripe4 {
+  display: flex;
+  flex: 1 1 20%;
+  align-self: stretch;
+  background-color: #f8bb44;
+  animation: stripe4 0.5s ease 0.4s 1 normal backwards;
+}
+
+@keyframes stripe4 {
+  0% {
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* stripe5 apareix p la dreta. Delay 0.5 */
+.stripe5 {
+  display: flex;
+  flex: 1 1 20%;
+  align-self: stretch;
+  background-color: #f24b4b;
+  animation: stripe5 0.5s ease 0.5s 1 normal backwards;
+}
+
+@keyframes stripe5 {
+  0% {
+    -webkit-transform: translate3d(200%, 0, 0);
+    transform: translate3d(200%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
