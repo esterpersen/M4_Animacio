@@ -1,0 +1,122 @@
+* {
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 20px;
+  width: 500px;
+  height: 500px;
+  background-color: lightgreen;
+  border: 5px solid darkolivegreen;
+}
+
+.pilota {
+  margin: 0px;
+  padding: 0px;
+  left: 0px;
+  top: 0px;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  transform-origin: center;
+  animation: moure-vertical 3s 0s infinite alternate both,
+    moure-horitzontal 3s 0s infinite alternate both;
+}
+
+.pilota img {
+  margin: 0px;
+  border: 0px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@keyframes moure-vertical {
+  0% {
+    top: 5px;
+    height: 60px;
+    animation-timing-function: ease-in;
+  }
+  5% {
+    top: 10px;
+    /* height: 50px; */
+    animation-timing-function: ease-in;
+  }
+
+  38% {
+    top: 420px;
+    height: 50px;
+    animation-timing-function: ease-out;
+  }
+  40% {
+    top: 465px;
+    height: 30px;
+    animation-timing-function: ease-out;
+  }
+  42% {
+    top: 420px;
+    height: 50px;
+    animation-timing-function: ease-out;
+  }
+
+  70% {
+    top: 20px;
+    height: 60px;
+    animation-timing-function: ease-in;
+  }
+
+  95% {
+    top: 440px;
+    height: 50px;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    top: 465px;
+    height: 30px;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes moure-horitzontal {
+  0% {
+    left: 0px;
+    width: 40px;
+    animation-timing-function: ease-in;
+  }
+  5% {
+    left: 2px;
+    animation-timing-function: ease-in;
+  }
+
+  38% {
+    left: 140px;
+    width: 50px;
+    animation-timing-function: ease-out;
+  }
+  40% {
+    left: 160px;
+    width: 60px;
+    animation-timing-function: ease-out;
+  }
+  42% {
+    left: 180px;
+    animation-timing-function: ease-out;
+  }
+
+  70% {
+    left: 330px;
+    width: 40px;
+    animation-timing-function: ease-in;
+  }
+
+  95% {
+    left: 430px;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    left: 430px;
+    width: 60px;
+    animation-timing-function: ease-out;
+  }
+}
