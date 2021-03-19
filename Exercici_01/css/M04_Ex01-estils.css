@@ -1,0 +1,66 @@
+* {
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 20px;
+  width: 500px;
+  height: 500px;
+  background-color: lightgreen;
+  border: 5px solid darkolivegreen;
+}
+
+.pilota {
+  margin: 0px;
+  padding: 0px;
+  left: 0px;
+  top: 0px;
+  position: relative;
+  animation: moure-vertical 3s 0s infinite alternate both,
+    moure-horitzontal 3s 0s infinite alternate both;
+}
+
+.pilota img {
+  margin: 0px;
+  border: 0px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@keyframes moure-vertical {
+  0% {
+    top: 0px;
+  }
+
+  40% {
+    top: 440px;
+  }
+
+  75% {
+    top: 0px;
+  }
+
+  100% {
+    top: 440px;
+  }
+}
+
+@keyframes moure-horitzontal {
+  0% {
+    left: 0px;
+  }
+
+  40% {
+    left: 160px;
+  }
+
+  75% {
+    left: 320px;
+  }
+
+  100% {
+    left: 440px;
+  }
+}
